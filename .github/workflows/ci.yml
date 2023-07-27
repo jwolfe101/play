@@ -8,6 +8,8 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Dump Context
         run: echo  '${{ toJSON(github) }} -- ${{ toJson(job) }} '
